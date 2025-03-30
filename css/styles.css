@@ -11,7 +11,7 @@ body {
     color: white;
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 10px 30px;
     position: fixed;
     top: 0;
     width: 100%;
@@ -21,6 +21,10 @@ body {
   .mini-header .contact-info {
     display: flex;
     gap: 15px;
+  }
+  
+  .mini-header .social-icons {
+    margin-right: 40px;
   }
   
   .mini-header .social-icons img {
@@ -52,9 +56,15 @@ body {
     max-height: 50px;
   }
   
-  .main-header .social-icons img {
-    width: 24px;
-    height: 24px;
+  .main-header .navigation .nav-link {
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+  }
+  
+  .main-header .navigation .nav-link:hover,
+  .main-header .navigation .nav-link:focus {
+    color: orange;
   }
   
   /* Imagen Principal */
@@ -100,21 +110,22 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  .info-box.active {
+    background-color: orange;
+    color: white;
   }
   
   .info-box h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    cursor: pointer;
   }
   
   .info-box .info-content {
     display: none;
-    background-color: orange;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
     margin-top: 10px;
   }
   
@@ -125,15 +136,13 @@ body {
   /* Catálogo de Productos */
   .catalog {
     text-align: center;
-    background-color: orange;
-    color: white;
     padding: 40px 20px;
-    border-radius: 10px;
   }
   
   .catalog-title {
     font-size: 28px;
     margin-bottom: 20px;
+    color: #fa8807;
   }
   
   .product-grid {
@@ -143,11 +152,10 @@ body {
   }
   
   .product-item {
-    background-color: white;
     border-radius: 50%;
     padding: 20px;
     text-align: center;
-    color: #333;
+    color: white;
   }
   
   .product-item img {
@@ -158,6 +166,8 @@ body {
   .product-item h3 {
     margin-top: 10px;
     font-size: 16px;
+    font-weight: bold;
+    color: black;
   }
   
   /* Galería Familiar */
@@ -240,7 +250,7 @@ body {
   }
   
   .coverage-item .description {
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 10px;
   }
   
@@ -251,6 +261,11 @@ body {
     padding: 40px 20px;
   }
   
+  .faq h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
   .faq-item {
     background-color: white;
     color: #333;
@@ -258,15 +273,35 @@ body {
     padding: 20px;
     margin-bottom: 20px;
     text-align: center;
+    cursor: pointer;
+  }
+  
+  .faq-item.active {
+    background-color: orange;
+    color: white;
   }
   
   /* Formulario de Contacto */
   .contact-form {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .contact-form h2 {
     background-color: orange;
     color: white;
-    padding: 40px 20px;
+    padding: 10px;
     border-radius: 10px;
-    text-align: center;
+  }
+  
+  .contact-form .contact-help {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  .contact-form .contact-help .highlight {
+    color: orange;
+    font-weight: bold;
   }
   
   .contact-form .form-grid {
@@ -285,8 +320,8 @@ body {
   }
   
   .contact-form button {
-    background-color: white;
-    color: orange;
+    background-color: orange;
+    color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -295,7 +330,6 @@ body {
   
   .contact-form button:hover {
     background-color: darkorange;
-    color: white;
   }
   
   /* Footer */
@@ -326,6 +360,8 @@ body {
   }
   
   .powered-by {
-    text-align: center;
+    text-align: right;
+    font-size: 12px;
+    font-weight: bold;
     margin-top: 10px;
   }
